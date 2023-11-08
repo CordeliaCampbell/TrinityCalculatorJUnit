@@ -140,6 +140,12 @@ public class InMemoryMemberDAOTests {
     }
 
     @Test
+    public void salariesLT100k() {
+        assertThat(dao.salariesLessThan(100000.0)).isTrue();
+        assertThat(dao.salariesLessThan(5000.0)).isFalse();
+    }
+
+    @Test
     public void greyjoys() {
         assertThat(dao.anyMembers(House.GREYJOY)).isFalse();
     }

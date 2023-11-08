@@ -29,6 +29,9 @@ public interface MemberDAO {
 
     boolean salariesGreaterThan(double max);
 
+    //My added method
+    boolean salariesLessThan(double max);
+
     boolean anyMembers(House house);
 
     long howMany(House house);
